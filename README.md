@@ -4,8 +4,12 @@ Otts is a customized versión of an alpine linux designed to hacking using Termu
 ## How to install?
 Run the next command:
 ```
-yes | pkg install proot-distro; git clone https://github.com/stringmanolo/otts && 7z x otts.7z && mv otts.override.sh /data/data/com.termux/files/usr/etc/proot-distro/ && mv otts /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/otts
+yes | pkg install proot-distro; git clone https://github.com/stringmanolo/otts && 7z x otts.7z && mv otts.override.sh /data/data/com.termux/files/usr/etc/proot-distro/ && mv otts /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/otts && echo '#!/usr/bin/bash
+proot-distro login otts' > ~/../usr/bin/otts && chmod +775 ~/../usr/bin/otts && otts
 ```
 
 ## How to run?
-proot-distro login otts
+Run the next command
+```
+otts
+```
